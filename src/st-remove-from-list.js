@@ -24,6 +24,8 @@ module.exports = function removeKFromList(l, k) {
     l.value = l.next.value;
     l.next = l.next.next;
   }
-  return (!l.next) ? l : removeKFromList(l.next, k);
-  
+  if (l.next) {
+    removeKFromList(l.next, k);
+  } 
+  return l; 
 }
