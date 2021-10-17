@@ -19,7 +19,7 @@ module.exports = class BinarySearchTree {
     if (this._root === null) {
       return (this._root = new Node(data));
     } else {
-      debugger
+      
       return this._root = insertNode(this._root, data);
     }
 
@@ -37,7 +37,7 @@ module.exports = class BinarySearchTree {
       } else {
         node.right = insertNode(node.right, data);
       }
-      debugger;
+      
       return node;
 
     }
